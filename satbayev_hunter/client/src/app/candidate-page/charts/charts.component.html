@@ -1,0 +1,39 @@
+<div class="can">
+    <canvas baseChart [chartType]="chartType" [labels]="chartLabels" [data]="chartData">
+    </canvas>
+</div>
+
+<div class="sss">
+  <div class="stats">
+    <div class="stat">
+      <div class="header">
+        <p>Количество голосов</p>
+      </div>
+      <div class="body"><h4>{{totalVote}}</h4></div>
+    </div>
+
+    <div class="stat">
+      <div class="header">
+        <p>Достоин</p>
+      </div>
+      <div class="body">
+        <h4>{{posVotePercent || 0}}</h4>
+        <span class="percent">%</span>
+      </div>
+    </div>
+
+    <div class="stat">
+        <div class="header">
+          <p>Недостоин</p>
+        </div>
+        <div class="body">
+          <h4>{{negVotePercent || 0}}</h4>
+          <span class="percent">%</span>
+        </div>
+    </div>
+  </div>
+</div>
+
+<app-stats></app-stats>
+
+ 

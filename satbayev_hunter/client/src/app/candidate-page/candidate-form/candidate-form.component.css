@@ -1,0 +1,101 @@
+.lb{
+    font-size: 18px;
+}
+.col {
+    margin-bottom: 0px;
+}
+.row {
+    margin-bottom: 4px;
+}
+.mn {
+    margin-left: 10px;
+    margin-top: 60px;
+}
+
+.subinform{
+    margin-left: 10px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.formicon{
+    color: #1565c0;
+    margin-right: 5px;
+}
+.formiconpdf{
+    color: white;
+}
+
+.info{
+    color: #1565c0;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.linkpdf{
+    color: white;
+    font-size:18px;
+}
+
+.page-title{
+    margin-bottom: 10px;
+}
+
+.filediv{
+    margin-top: 0px;
+    padding: 10px;
+    background-color: #e53935;
+    border-radius: 5px ;
+}
+
+.dsko{
+    margin: 0;
+    height: 52px;
+    margin-left: 25px;
+    margin-top: 3px;
+    font-weight: 500;
+    background-color: #1565c0;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.del:hover{
+    color: white;
+}
+
+.dsko:hover{
+    color: white;
+}
+
+.secondd{
+    margin-left: 20px;
+    background-color: #1565c0;
+}
+
+.cardd{
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+}
+.card-title{
+    font-size: 18px;
+}
+.blue-grey{
+    border-radius: 20px;
+}
+
+.dsbtn{
+    display: block;
+    border-radius: 50px;
+    background-color: #1565c0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+.dsbtn:hover{
+    color: white;
+}
+.input-field{
+    width: 50%;
+}

@@ -1,0 +1,20 @@
+.order{
+    height: 54px;
+}
+.filbeg{
+    margin-top: 0;
+    margin-left: 5px;
+}
+.btn{
+    background-color: #2c4d9e;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-top: -40px;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn:hover{
+    color: white;
+}
+.fr{
+    margin-left: 20px;
+}

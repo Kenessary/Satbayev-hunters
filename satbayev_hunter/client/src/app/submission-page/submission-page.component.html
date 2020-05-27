@@ -1,0 +1,163 @@
+<!-- <div class="sub">
+    <div class="sub_forms">
+        <div class="container">
+            <h1 class="sub_title"> Оставить заявку на работу </h1>
+                <form class="sub_form" action="#">
+                    <input name="name" required  placeholder="Имя" type="text">
+                    <input name="surname" required  placeholder="Фамилия" type="text">
+                    <input name="middname" required  placeholder="Отчество" type="text">
+                    <input name="phone" required placeholder="Телефон">
+                    <input name="email" required placeholder="E-mail" type="email">
+                    <div class="sub_uploadfile">
+                        <p>Приложите свое резюме и остальные документы в одном файле в формате .pdf  <br><br> 
+                        Пожалуйста, убедитесь что прилагаемый файл весит не более десять мегабайт <span>(10MB)</span></p>
+                        <input name="pdf" id="files" required type="file" accept="application/msword, application/pdf">
+                    </div>
+                    <input type="submit" class="subt">
+                </form>
+        </div>
+    </div>
+</div> -->
+
+<form class="card" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="card-content">
+        <span class="card-title subs">Подать заявление на вакансию</span>
+
+        <div class="row">
+            <div class="input-field inp1">
+                <input
+                    formControlName = "name" 
+                    id="name" 
+                    type="text"
+                    [ngClass]="{'invalid': form.get('name').invalid && form.get('name').touched}"
+                >
+                <label for="name">Имя*</label>
+                <span 
+                    class="helper-text red-text"
+                    *ngIf="form.get('name').invalid && form.get('name').touched"
+                >
+                    <span *ngIf="form.get('name').errors['required']">
+                        Имя не может быть пустым
+                    </span> 
+                </span>
+            </div>
+            <div class="input-field inp2">
+                <input
+                    formControlName = "surname" 
+                    id="surname" 
+                    type="text"
+                    [ngClass]="{'invalid': form.get('surname').invalid && form.get('surname').touched}"
+                >
+                <label for="surname">Фамилия*</label>
+                <span 
+                    class="helper-text red-text"
+                    *ngIf="form.get('surname').invalid && form.get('surname').touched"
+                >
+                    <span *ngIf="form.get('surname').errors['required']">
+                        Фамилия не может быть пустым
+                    </span> 
+                </span>
+            </div>
+        </div>
+ 
+        <div class="input-field inp3">
+            <input
+                formControlName = "email" 
+                id="email" 
+                type="email"
+                [ngClass]="{'invalid': form.get('email').invalid && form.get('email').touched}"
+            >
+            <label for="email">E-mail:</label>
+            <span 
+            class="helper-text red-text"
+            *ngIf="form.get('email').invalid && form.get('email').touched"
+            >
+                <span *ngIf="form.get('email').errors['required']">
+                    E-mail не может быть пустым
+                </span>
+            </span>
+        </div>
+        <div class="input-field inp4">
+            <input
+                formControlName="phone" 
+                id="phone" 
+                type="tel"
+            >
+            <label for="phone">Номер телефона:</label>
+        </div>
+
+        <div class="input-field">
+            <select formControlName="position" *ngIf="positions" [(ngModel)]="selectedPosition" (change)="onSelectPosition($event.target.value)" class="icons browser-default position" id="positions">
+                <option value="0" disabled selected class="position">Выберите должность</option>
+                <option class="position" *ngFor="let position of positions" value= {{position.name}}>{{position.name}}</option>
+            </select>
+        </div>
+        <div class="input-field">
+            <select formControlName="faculty" *ngIf="faculties" [(ngModel)]="selectedFaculty" (change)="onSelectFaculty($event.target.value)" class="icons browser-default faculty" id="faculty">
+                <option value="0" disabled selected class="faculty">Выберите кафдеру</option>
+                <option class="faculty" *ngFor="let faculty of faculties" value= {{faculty.name}}>{{faculty.name}}</option>
+            </select>
+        </div>
+       
+        <div class="qwerty">
+            <input 
+                type="file"
+                class="dn"
+                (change) = "onFileUpload($event)" 
+                #input
+            >
+          
+            <button
+                (click)="triggerClick()"
+                [disabled]="form.disabled"
+                type="button" 
+                class="waves-effect waves-light btn orange accent-3 mb2 e"
+            >
+                <i class="material-icons left">backup</i>
+                Загрузить документы
+            </button>
+
+            <div class="filename">
+                <span *ngIf = "pdfPreview" class="pdftitle">{{pdf.name}} {{pdfSize}} КБ</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-action">
+        <button
+            type="submit" 
+            class="modal-action btn waves-effect light-blue darken-4 ds"
+        >
+            <i class="material-icons left">send</i>
+            Отправить
+        </button>
+    </div>
+</form>
+
+
+<div #modal class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <div class="animation-ctn">
+            <div class="icon icon--order-success svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="154px" height="154px">  
+                <g fill="none" stroke="#22AE73" stroke-width="2"> 
+                    <circle cx="77" cy="77" r="72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;"></circle>
+                    <circle id="colored" fill="#22AE73" cx="77" cy="77" r="72" style="stroke-dasharray:480px, 480px; stroke-dashoffset: 960px;"></circle>
+                    <polyline class="st0" stroke="#fff" stroke-width="10" points="43.5,77.8 63.7,97.9 112.2,49.4 " style="stroke-dasharray:100px, 100px; stroke-dashoffset: 200px;"/>   
+                </g> 
+                </svg>
+            </div>
+        </div>
+        <div class="textthanks">Спасибо за вашу заявку</div>
+    </div>
+    <div class="modal-footer">
+        <button 
+        class="modal-action btn waves-effect light-blue darken-4 dss"
+        (click)="cancel()"
+        >
+            ОK
+        </button>
+    </div>
+</div>
+
+

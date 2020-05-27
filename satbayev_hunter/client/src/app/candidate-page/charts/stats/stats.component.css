@@ -1,0 +1,19 @@
+.ds{
+    width: 160px;
+    border-radius: 50px;
+  }
+
+.ds:hover{
+    color: white;
+}
+
+.row{
+  margin-bottom: 0;
+}
+.card-content{
+  padding-bottom: 0;
+}
+.input-field{
+  margin-bottom: 0;
+  margin-top: 0;
+}

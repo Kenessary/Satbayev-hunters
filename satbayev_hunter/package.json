@@ -1,0 +1,40 @@
+{
+  "name": "satbayev_hunter",
+  "version": "1.0.0",
+  "description": "diplome project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "server": "nodemon index",
+    "client-install": "npm install --prefix client",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run server\""
+  },
+  "keywords": [
+    "express",
+    "angular"
+  ],
+  "author": "Zakir Kenessary",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.2",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pusher": "^3.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}

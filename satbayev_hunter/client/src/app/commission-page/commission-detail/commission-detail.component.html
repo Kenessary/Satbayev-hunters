@@ -1,0 +1,33 @@
+<div class="page-title">
+    <h4>
+        <a [routerLink]="['/commission']">Комиссия </a>
+        <i class="material-icons">keyboard_arrow_right</i>
+        О комиссии 
+    </h4>
+    <span>
+        <button class="btn btn-small red" (click)="deleteCommission()">
+          <i class="material-icons">delete</i>
+        </button>
+      </span>
+</div>
+
+<div class="row">
+    <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+      
+      <div class="row">
+        <i class="material-icons formicon">account_circle</i>  <span class="info">ФИО:</span> <p class="subinform">{{commission?.fullname}}</p>
+      </div>
+
+      <div class="row">
+        <i class="material-icons formicon">email</i> <span class="info">Email:</span> <p class="subinform">{{commission?.phone}}</p>
+      </div>
+
+      <div class="row">
+        <i class="material-icons formicon">phone</i> <span class="info">Телефон:</span> <p class="subinform">{{commission?.email}}</p>
+      </div>
+
+      <div class="row">
+        <i class="material-icons formicon">work</i> <span class="info">Должность:</span> <p class="subinform">{{commission?.position}}</p>
+      </div>
+    </form>
+</div>

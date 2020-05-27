@@ -1,0 +1,22 @@
+.refresh{
+    margin-top: 2px;
+    margin-left: -630px;
+    cursor: pointer;
+    color: #112e75;
+}
+
+.center{
+    margin-right:50px;
+    font-size: 30px;
+    font-weight: 500;
+}
+.filterbtn:hover{
+    color: white;
+}
+.grey{
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+.grey:hover{
+    color: white;
+}

@@ -1,0 +1,65 @@
+.main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  padding-top: 0;
+  .section {
+    padding: 0;
+  }
+  .section.census {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .data{
+    flex: 2;
+  }
+}
+p.error{
+  font-size: 13px;
+  color: red ;
+  margin: 5px 0;
+}
+h4 {
+  padding: 0;
+  margin-top: 0;
+
+}
+p {
+  margin: 5px 0;
+  font-size: 22px;
+}
+div.option-list {
+  margin-top: 20px;
+  padding-left: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  button.option {
+    padding: 15px;
+    margin: 7px 0;
+    background: #1565c0;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    .fas {
+      font-size: 1.2em;
+      margin-right: 10px;
+    }
+  }
+  button[disabled] {
+    background: #1565c0;
+    cursor: default;
+  }
+  button.selected {
+    background: #3CB371;
+  }
+  button:focus {
+    background: #3CB371;
+  }
+}

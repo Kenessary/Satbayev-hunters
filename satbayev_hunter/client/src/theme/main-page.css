@@ -1,0 +1,25 @@
+.main .main_img {
+    width: 400px;
+    height: 400px;
+    margin: 40px 0 0 490px;
+}
+.main .main_btn {
+    padding: 0;
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    margin: 0px 620px 0 564px;
+    background-color:#1970B7;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.main .main_link {
+    text-decoration: none;
+    color: #fff
+}

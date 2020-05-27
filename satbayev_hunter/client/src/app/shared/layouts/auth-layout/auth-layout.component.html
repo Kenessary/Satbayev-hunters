@@ -1,0 +1,20 @@
+<nav>
+    <div class="nav-wrapper light-blue darken-4">
+        <img src="assets/images/Screenshot_6.png" alt="" class="logosat1">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li routerLinkActive = "active">
+                <a routerLink="/loginadmin">Вход для Админа</a>
+            </li>
+            <li routerLinkActive = "active">
+                <a routerLink="/login">Вход</a>
+            </li>
+            <li routerLinkActive = "active">
+                <a routerLink="/register">Регистрация</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="auth-block">
+ <router-outlet></router-outlet>
+</div>

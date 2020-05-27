@@ -1,0 +1,55 @@
+<div class="page-title">
+    <h4>
+        <a [routerLink]="['/vote']">Голосования </a>
+        <i class="material-icons">keyboard_arrow_right</i>
+        Заявка кандидата 
+        <a class="btn-floating btn-large waves-effect waves-light red doccc"
+        href="http://localhost:5000/{{vote?.docsSrc}}" target="_blank">
+        <i class="material-icons">picture_as_pdf</i>
+        </a>
+    </h4>
+    <span>
+        <button class="btn btn-small red" (click)="deleteVote()">
+          <i class="material-icons">delete</i>
+        </button>
+    </span>
+</div>
+
+<div class="row">
+    <form  [formGroup]="form">
+      <div class="row">
+        <div class="row col s3">
+          <i class="material-icons formicon">account_circle</i>  
+          <span class="info">Имя, Фамилия:</span> 
+          <p class="subinform">{{vote?.name}} {{vote?.surname}}</p>
+        </div>
+
+        <div class="row col s3">
+            <i class="material-icons formicon">email</i>
+            <span class="info">Email:</span>
+            <p class="subinform">{{vote?.email}}</p>
+        </div>
+    </div>
+    <div class="row">
+      <div class="row col s3">
+        <i class="material-icons formicon">phone</i>
+        <span class="info">Телефон:</span>
+        <p class="subinform">{{vote?.phone}}</p>
+      </div>
+
+      <div class="row col s3">
+        <i class="material-icons formicon">work</i>
+        <span class="info">Должность:</span> 
+        <p class="subinform">{{vote?.position}}</p>
+      </div>
+    </div>
+
+      <div class="row">
+        <p class="subinform">{{vote?.faculty}}</p>
+      </div>
+    </form>
+</div>
+
+<hr>
+
+<app-candidates-vote></app-candidates-vote>

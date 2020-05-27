@@ -1,0 +1,81 @@
+table.table-striped tbody tr {
+    background-color: #ffffff;
+}
+table.table-striped tbody tr:hover {
+    background-color: #f0f0f0
+}
+
+td, th {
+    text-align: justify;
+}
+
+td{ 
+    cursor: pointer;
+    border-style: none;
+}
+.filterbtn:hover{
+    color: white;
+}
+
+.grey{
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+.grey:hover{
+    color: white;
+}
+
+.center{
+    margin-right:50px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.filter{
+    display: flex;
+    align-items:center;
+    widows: 100px;
+    margin-bottom: 1rem;
+    height: 30px;
+}
+
+.filter input{
+    width: 50%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 .5rem;
+}
+
+.card{
+    width: 250px;
+    height: 170px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+}
+.card-title{
+    font-weight: 500;
+}
+.card-body{
+    background-color: #112e75;
+    color: white;
+    border-radius: 20px;
+}
+.btt{
+    background-color: #112e75;
+    border-radius: 50px;
+}
+.center{
+    margin-left: 250px;
+}
+
+.refresh{
+    margin-top: 2px;
+    margin-left: -780px;
+    cursor: pointer;
+    color: #112e75;
+}
+.btnn{
+    margin-left: -250px;
+}

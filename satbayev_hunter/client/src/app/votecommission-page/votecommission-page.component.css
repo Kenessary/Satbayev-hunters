@@ -1,0 +1,41 @@
+
+.card{
+    width: 250px;
+    height: 250px;
+}
+.card-title{
+    font-weight: 500;
+}
+.card-body{
+    background-color: #112e75;
+    color: white;
+}
+.btt{
+    background-color: #112e75;
+    border-radius: 50px;
+}
+.filterbtn:hover{
+    color: white;
+}
+.grey{
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+.grey:hover{
+    color: white;
+}
+.center{
+    margin-left: -50px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.refresh{
+    margin-top: 2px;
+    margin-left: -750px;
+    cursor: pointer;
+    color: #112e75;
+}
+.btnn{
+    margin-left: -250px;
+}

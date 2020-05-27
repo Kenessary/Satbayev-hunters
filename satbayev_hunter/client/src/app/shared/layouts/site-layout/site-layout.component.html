@@ -1,0 +1,18 @@
+<ul class="sidenav sidenav-fixed a-sidenav">
+    <img src="assets/images/2-1.png" alt="" class="logosat">
+
+    <li 
+        class="bold" 
+        *ngFor="let link of links"
+        routerLinkActive = "active"
+    >
+        <a [routerLink]="[link.url]" class="waves-effect waves-blue" style="font-size: 18px;">
+            {{link.name}}
+        </a>
+    </li>
+    <li class="bold last"><a href="#" class="waves-effect waves-orange" (click)="logout($event)" style="font-size: 20px;"> <i class="material-icons small">power_settings_new</i> Выйти</a></li>
+</ul>
+
+<main class="content">
+    <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,8 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+@import "theme/styles";
+@import "theme/main-page.css";
+@import "theme/submission-page.css";
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}

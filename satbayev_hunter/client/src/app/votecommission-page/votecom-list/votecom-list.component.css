@@ -1,0 +1,18 @@
+.card{
+    width: 250px;
+    height: 250px;
+}
+.card-title{
+    font-weight: 500;
+}
+.card-body{
+    background-color: #112e75;
+    color: white;
+}
+.btt{
+    background-color: #112e75;
+    border-radius: 50px;
+}
+.center{
+    margin-left: 250px;
+}

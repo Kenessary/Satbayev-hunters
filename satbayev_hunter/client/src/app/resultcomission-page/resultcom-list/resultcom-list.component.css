@@ -1,0 +1,23 @@
+.card{
+    width: 250px;
+    height: 170px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+}
+.card-title{
+    font-weight: 500;
+}
+.card-body{
+    background-color: #112e75;
+    color: white;
+    border-radius: 20px;
+}
+.btt{
+    background-color: #112e75;
+    border-radius: 50px;
+}
+.center{
+    margin-right:50px;
+    font-size: 30px;
+    font-weight: 700;
+}

@@ -1,0 +1,38 @@
+<div class="page-title">
+    <h4>
+        <a [routerLink]="['/resultcommission']">Результаты </a>
+        <i class="material-icons">keyboard_arrow_right</i>
+        Результаты кандидата 
+    </h4>
+</div>
+
+<div class="row ssss">
+    <div>
+      <div class="row">
+        <p class="subinform">{{voteres?.name}} {{voteres?.surname}}</p>
+      </div>
+
+      <div class="row">
+        <p class="subinform">Количество голосов: {{voteres?.totalvote}}</p>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card" style="background-color: #3CB371;">
+      <div class="card-body">
+        <h5 class="card-title">Положительные голоса</h5>
+        <p class="card-text">{{voteres?.posVote}}%</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card" style="background-color: rgb(244, 67, 54);">
+      <div class="card-body">
+        <h5 class="card-title">Отрицательные голоса</h5>
+        <p class="card-text">{{voteres?.negVote}}%</p>
+      </div>
+    </div>
+  </div>
+</div>

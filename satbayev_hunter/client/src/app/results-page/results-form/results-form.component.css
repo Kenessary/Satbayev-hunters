@@ -1,0 +1,94 @@
+.lb{
+    font-size: 18px;
+}
+.col {
+    margin-bottom: 0px;
+}
+.row {
+    margin-bottom: 4px;
+}
+.mn {
+    margin-left: 10px;
+    margin-top: 60px;
+}
+
+
+.subinform{
+    margin-left: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.formicon{
+    color: #1565c0;
+    margin-right: 5px;
+}
+.formiconpdf{
+    color: white;
+}
+
+.info{
+    color: #1565c0;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.linkpdf{
+    color: white;
+    font-size:18px;
+}
+
+.page-title{
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.filediv{
+    margin-top: 0px;
+    padding: 10px;
+    background-color: #e53935;
+    border-radius: 5px ;
+}
+
+.dsko{
+    margin: 0;
+    height: 50px;
+    margin-left: 25px;
+    margin-top: 3px;
+    background-color: #1565c0;
+    border-radius: 50px;
+}
+
+.secondd{
+    margin-left: 20px;
+    background-color: #1565c0;
+}
+
+.doccc{
+    margin-bottom: 5px;
+}
+
+.ssss{
+    margin-top: 20px;
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+.card-title{
+    font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+.card-text{
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 200;
+    color: white;
+}

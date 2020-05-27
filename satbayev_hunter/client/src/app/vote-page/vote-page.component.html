@@ -1,0 +1,62 @@
+<div class="page-title">
+    <h4>Голосования</h4>
+    <i class="material-icons refresh" (click)="refresh()">refresh</i>
+    <button 
+        (click)="isFilterVisible = !isFilterVisible"
+        class="btn btn-small light-blue darken-4 waves-effect waves-light filterbtn" 
+        [ngClass]="{
+            'active': isFilterVisible,
+            'red': isFiltered()
+        }"
+        data-tooltip="Открыть фильтр"
+        data-position="left"
+        #tooltip
+    >
+        <i class="material-icons">filter_list</i>
+    </button>
+</div>
+
+<app-vote-filter 
+    *ngIf="isFilterVisible"
+    (onFilter)="applyFilter($event)"
+></app-vote-filter>
+
+<!-- <div class="filter">
+    <input 
+        type="text"
+        placeholder="🔍 Поиск кандидат..."
+        [(ngModel)]="searchVote"
+    >
+</div> -->
+
+<div *ngIf="!reloading;else reloadingBlock">
+    <div class="centereds" *ngIf="votes.length !== 0; else empty">
+        <app-vote-list [votes]="votes"></app-vote-list>
+        <div 
+            class="center mb2"
+            *ngIf="!noMoreOrders"
+        >
+            <button 
+                class="btn waves-effect grey darken-1 btn-small btnn"
+                (click)="loadMore()" 
+                *ngIf="!loading;else loader"
+            >
+                Загрузить еще
+            </button>
+            <ng-template #loader class="secload">
+                <app-loaderr></app-loaderr>
+            </ng-template>
+        </div>
+    </div>
+<ng-template #empty>
+    <div class="center">
+        У вас нет ни одного кандидата
+    </div>
+</ng-template>
+</div>
+
+<ng-template #reloadingBlock>
+    <app-loader></app-loader>
+</ng-template>
+
+ 

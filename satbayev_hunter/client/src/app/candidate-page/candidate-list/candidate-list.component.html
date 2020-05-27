@@ -1,0 +1,26 @@
+ <div class="table-wrapper">
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>ФИО</th>
+                    <th>Email</th>
+                    <th>Должность</th>
+                    <th>Время подачи заявок</th>
+                    <th>Подробнее</th>
+                </tr>
+        </thead>
+  
+        <tbody >
+            <tr *ngFor="let candidate of candidates">
+                <td class="collection-item ">{{candidate.name}} {{candidate.surname}}</td>
+                <td class="collection-item ">{{candidate.email}}</td>
+                <td class="collection-item ">{{candidate.position}}</td>
+                <td class="collection-item ">{{candidate.date | date:'dd.MM.yyyy [HH:mm]'}}</td>
+                <td>
+                    <button class="btn btn-small modal-trigger grey darken-1 bt" data-target="order-list" [routerLink]="['/candidate', candidate._id]">
+                        <i class="material-icons">open_in_new</i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+</table>

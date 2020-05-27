@@ -1,0 +1,95 @@
+<div class="page-title">
+    <h4>
+        <a [routerLink]="['/candidate']">Кандидаты </a>
+        <i class="material-icons">keyboard_arrow_right</i>
+        Заявка кандидата 
+    </h4>
+    <span>
+        <button class="btn btn-small red del" (click)="deleteCandidate()">
+          <i class="material-icons">delete</i>
+        </button>
+    </span>
+</div>
+
+<div class="row">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      
+      <div class="row">
+        <i class="material-icons formicon">account_circle</i>  
+        <span class="info">Имя, Фамилия:</span> 
+        <p class="subinform">{{candidate?.name}} {{candidate?.surname}}</p>
+        
+      </div>
+
+      <div class="row">
+          <i class="material-icons formicon">email</i>
+          <span class="info">Email:</span>
+          <p class="subinform">{{candidate?.email}}</p>
+      </div>
+
+      <div class="row">
+        <i class="material-icons formicon">phone</i>
+        <span class="info">Телефон:</span>
+        <p class="subinform">{{candidate?.phone}}</p>
+      </div>
+
+      <div class="row">
+        <i class="material-icons formicon">work</i>
+        <span class="info">Должность:</span> 
+        <p class="subinform">{{candidate?.position}}</p>
+      </div>
+
+      <div class="row">
+        <p class="subinform">{{candidate?.faculty}}</p>
+      </div>
+  
+      <div class="row">
+          <a class="btn-floating btn-large waves-effect waves-light red"
+              href="http://localhost:5000/{{candidate?.docsSrc}}" target="_blank">
+            <i class="material-icons">description</i>
+          </a>
+        <button
+        type="submit" 
+        class="modal-action btn waves-effect dsko"
+        >
+          <i class="material-icons left">add</i>
+          Добавить к голосованию
+        </button>
+      </div>
+    </form>
+</div>
+
+<hr>
+
+<h5>Пригласить кандидата на собеседование</h5>
+
+<form [formGroup]="form">
+      <div class="input-field">
+          <input
+              [formControl]="emailFormControl" 
+              id="email" 
+              type="email"
+          >
+          <label for="email">E-mail*</label>
+      </div>
+
+      <div class="input-field">
+          <textarea [formControl]="textFormControl" id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Cообщение для приглашения</label>
+      </div>
+
+  <div class="card-action">
+      <button
+           (click)="send()"
+          class="modal-action btn waves-effect dsbtn"
+      >
+          <i class="material-icons left">send</i>
+          Отправить
+      </button>
+  </div>
+</form>
+
+
+
+
+

@@ -1,0 +1,190 @@
+.dn {
+    display: none;
+}
+
+.h200{
+    height: 200px;
+}
+
+.modal{
+    width: 500px;
+    height: 400px;
+    border-radius: 30px;
+}
+
+.modal-footer{
+    display: flex;
+}
+
+.modal .modal-footer .btn {
+    margin: 6px 215px 6px 210px;
+    border-radius: 100px;
+    width: 100px;
+    height: 35px;
+}
+.modal .modal-footer .btn:hover{
+    color: white;
+}
+
+.inp1{
+    margin: 5px 10px 0 0;
+    width: 220px;
+}
+.inp2{
+    margin: 5px 0 0 0;
+    width: 220px ;
+}
+.inp4 {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.row{
+    margin: 0;
+}
+select{
+    border-style: none;
+    color: grey;
+}
+.position {
+    font-family: 'Montserrat', sans-serif;
+}
+.faculty {
+    font-family: 'Montserrat', sans-serif;
+}
+.e{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    border-radius: 50px;
+}
+.e:hover{
+    color: white;
+}
+.ds{
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 50px;
+    background-color: #2c4d9e;
+    width: 200px;
+    margin-right: 130px;
+}
+.ds:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.textthanks{
+    text-align: center;
+}
+
+
+.animation-ctn{
+    text-align:center;
+    margin-top:5em;
+  }
+  
+      @-webkit-keyframes checkmark {
+      0% {
+          stroke-dashoffset: 100px
+      }
+  
+      100% {
+          stroke-dashoffset: 200px
+      }
+  }
+  
+  @-ms-keyframes checkmark {
+      0% {
+          stroke-dashoffset: 100px
+      }
+  
+      100% {
+          stroke-dashoffset: 200px
+      }
+  }
+  
+  @keyframes checkmark {
+      0% {
+          stroke-dashoffset: 100px
+      }
+  
+      100% {
+          stroke-dashoffset: 0px
+      }
+  }
+  
+  @-webkit-keyframes checkmark-circle {
+      0% {
+          stroke-dashoffset: 480px
+     
+      }
+  
+      100% {
+          stroke-dashoffset: 960px;
+        
+      }
+  }
+  
+  @-ms-keyframes checkmark-circle {
+      0% {
+          stroke-dashoffset: 240px
+      }
+  
+      100% {
+          stroke-dashoffset: 480px
+      }
+  }
+  
+  @keyframes checkmark-circle {
+      0% {
+          stroke-dashoffset: 480px 
+      }
+  
+      100% {
+          stroke-dashoffset: 960px
+      }
+  }
+  
+  @keyframes colored-circle { 
+      0% {
+          opacity:0
+      }
+  
+      100% {
+          opacity:100
+      }
+  }
+  
+  /* other styles */
+  /* .svg svg {
+      display: none
+  }
+   */
+  .inlinesvg .svg svg {
+      display: inline
+  }
+  
+  /* .svg img {
+      display: none
+  } */
+  
+  .icon--order-success svg polyline {
+      -webkit-animation: checkmark 0.25s ease-in-out 0.7s backwards;
+      animation: checkmark 0.25s ease-in-out 0.7s backwards
+  }
+  
+  .icon--order-success svg circle {
+      -webkit-animation: checkmark-circle 0.6s ease-in-out backwards;
+      animation: checkmark-circle 0.6s ease-in-out backwards;
+  }
+  .icon--order-success svg circle#colored {
+      -webkit-animation: colored-circle 0.6s ease-in-out 0.7s backwards;
+      animation: colored-circle 0.6s ease-in-out 0.7s backwards;
+  } 

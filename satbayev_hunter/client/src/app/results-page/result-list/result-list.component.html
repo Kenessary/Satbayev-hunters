@@ -1,0 +1,15 @@
+<div  class="row">
+    <div class="col-sm-3" *ngFor="let voteres of votesres">
+        <div class="card" >
+          <div class="card-body" style="padding-bottom: 5px;">
+            <h5 class="card-title" style="padding-bottom: 5px;">{{voteres.name}} {{voteres.surname}}</h5>
+            <p class="card-text" style="margin-bottom: 5px; padding-top: 5px;">Дата: {{voteres.date | date:'dd.MM.yyyy'}}</p>
+            <p class="card-text">Время: {{voteres.date | date:'HH:mm'}}</p>
+            <a  [routerLink]="['/results', voteres._id]" 
+                  class="btn-floating halfway-fab waves-effect waves-light red">
+                  <i class="material-icons">open_in_new</i>
+              </a>
+          </div>
+        </div>
+      </div>
+</div>

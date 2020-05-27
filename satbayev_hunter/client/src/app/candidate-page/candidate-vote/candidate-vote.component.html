@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="section census">
+    <p>Соответствует ли кандидат <br> избранной специальности?</p>
+
+    <div class="option-list">
+      <button class="option waves-effect waves-light" *ngFor="let option of options; index as i" (click)="takeVote(i)" [ngClass]="{selected: option.selected}"
+
+          [disabled]="selectedOption && selectedOption !== option.value">
+        <i class="fas fa-check" *ngIf="option.selected"></i>
+        {{option.label}}
+      </button>
+    </div>
+  </div>
+  
+
+
+  <div class="section data">
+    <!-- Include the chart component here -->
+    <app-charts [censusData]="censusData" (newEntry)="onNewEntry($event)">
+    </app-charts>
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+<form class="card" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="card-content">
+      <span class="card-title subs">Основная статистика голосования</span>
+
+        <div class="row">
+          <div class="input-field col s3">
+            <input
+                formControlName = "totalvote"
+                id="totalvote" 
+                type="text"
+            >
+            <label for="totalvote">Количество голосов:</label>
+          </div>
+          <div class="input-field col s3">
+            <input
+                formControlName = "posVote"
+                id="posVote" 
+                type="text"
+            >
+            <label for="posVote">Достоин:</label>
+          </div>
+          <div class="input-field col s3">
+            <input
+                formControlName = "negVote"
+                id="negVote" 
+                type="text"
+            >
+            <label for="phone">Недостоин:</label>
+          </div>
+    </div>
+    </div>
+    <div class="card-action">
+        <button
+            type="submit" 
+            class="modal-action btn waves-effect blue ds"
+        >
+            <i class="material-icons left">save</i>
+            Сохранить
+        </button>
+    </div>
+</form>
